@@ -42,7 +42,7 @@ def parser(content):
 if __name__ == "__main__":
 
     content = api_call(start_date, topic)
-    print (content)
+    #print (content)
     print (content['status'])
     print (content['totalResults'])
   
