@@ -58,7 +58,8 @@ if __name__ == "__main__":
     #mail_content = parser(content)
     for item in mail_content:
         mail_data = mail_data + unidecode(item)
-                    
+
+    mail_data = "Subject: Daily News \n\n" + mail_data            
     mail.send_mail(mail_data)
     
     

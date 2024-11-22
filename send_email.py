@@ -3,17 +3,11 @@ import os
 
 block = False
 
-def send_mail(mail):
+def send_mail(message):
     host = "smtp.gmail.com"
     port = 465
 
-
     receiver = "tdimambro@comcast.net"
-    message = f"""\
-        Subject: Daily News \n\n 
-        
-        {mail}
-    """
 
     with open ("cred.txt") as cred:
         creds = cred.readlines()
