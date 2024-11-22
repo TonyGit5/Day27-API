@@ -51,7 +51,9 @@ if __name__ == "__main__":
     for article in content['articles']:
         #print (f"{article['source']['name']} -- {article['title']} \n {article['description']} \n {article['url']} \n")
         #mail_content.append(str(f"{article['title']}  --  {article['source']['name']}\n {article['description']} \n {article['url']} \n"))
-        mail_content.append(str(f"{article['title']}\n {article['description']} \n {article['url']} \n"))
+        mail_content.append(str(f"{article['title']}\n \
+                                {article['description']} \n \
+                                    {article['url']} \n"))
     #print (mail_content)
     #mail_content = mail_content.encode("utf-8")
     mail_data = ""
@@ -59,6 +61,7 @@ if __name__ == "__main__":
     for item in mail_content:
         mail_data = mail_data + unidecode(item)
 
+    # Add Subject to the e-mail
     mail_data = "Subject: Daily News \n\n" + mail_data            
     mail.send_mail(mail_data)
     
