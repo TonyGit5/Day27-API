@@ -1,7 +1,7 @@
 venv
 *.txt
 __pycache__
-.jpg
-.jpeg
-.png
-.gif
+*.jpg
+*.jpeg
+*.png
+*.gif
